@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var admin = require('./routes/admin');
+var campaign = require('./routes/campaign');
 var ejs = require('ejs');
 var app = express();
 
@@ -30,9 +31,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
-// admins 项目路由
-app.use('/admin',admin);//增加
-
+//  项目路由
+app.use('/admin',admin);
+app.use('/campaign',campaign);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

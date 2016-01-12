@@ -1,14 +1,11 @@
-/*
- * GET home page.
- */
-var admins = require('./../db/yuea_schema.js');
+var campaign = require('./../db/yuea_schema.js');
 var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
 
-    res.render('admin/login', {
-    title: 'login'
+    res.render('campaign/introduction', {
+    title: '活动简介'
   });
   
 });
